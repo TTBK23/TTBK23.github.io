@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TheseusEvo JS</title>
+</head>
+<body style="background-color:lightgray">
+
+
+<canvas id="myCanvas" width="600" height="600"></canvas>
+
+<script src="core/TKMath.js"></script>
+<script src="core/Render.js"></script>
+<script src="gui/addButton.js"></script>
+<script src="gui/addSlider.js"></script>
+<script src="gui/addSliderLine.js"></script>
+<script src="gui/addSliderBox.js"></script>
+<script src="gui/addText.js"></script>
+<script src="gui/initializeAndBuildGUI.js"></script>
+<script src="core/RunEvolution.js"></script>
+<script src="core/RenderSimulator.js"></script>
+<script src="core/Enums.js"></script>
+<script src="core/Radius.js"></script>
+<script src="core/Web.js"></script>
+<script src="core/Spider.js"></script>
+
+<script>
+window.onresize = windowSizeChanged
+var halfPi = 1.57079632679;
+var pi     = 3.14159265359;
+var twoPi  = 6.28318530718;
+
+var canvas = document.getElementById("myCanvas");
+if (canvas.getContext) {
+  var ctx = canvas.getContext('2d');
+  setupLayout(ctx);
+  initializeAndBuildGUI(ctx);
+  renderSimulator(ctx);
+  // document.write(s.age())
+}
+
+</script>
+
+</body>
+</html>
